@@ -1,11 +1,14 @@
-import { Heart, Sparkles, MapPin, Home, ImageIcon } from "lucide-react";
+import { Heart, Sparkles, MapPin, Home } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import memory1 from "@/assets/memory-1.jpg";
+import memory2 from "@/assets/memory-2.jpg";
+import memory3 from "@/assets/memory-3.jpg";
 
 interface Memory {
   icon: React.ReactNode;
   title: string;
   description: string;
-  placeholder: string;
+  image: string;
 }
 
 const memories: Memory[] = [
@@ -13,19 +16,19 @@ const memories: Memory[] = [
     icon: <Sparkles className="w-5 h-5" />,
     title: "When You Became Important",
     description: "I can't pinpoint the exact moment. It just happened — slowly, then all at once. You weren't just someone I talked to anymore.",
-    placeholder: "Our first photo together",
+    image: memory1,
   },
   {
     icon: <MapPin className="w-5 h-5" />,
     title: "Miles Apart, Still Together",
     description: "Different cities, different skies. But every goodnight text felt like you were right here. The distance never stood a chance.",
-    placeholder: "A memory from the distance",
+    image: memory2,
   },
   {
     icon: <Home className="w-5 h-5" />,
     title: "Why Pallabi Feels Like Home",
     description: "Home isn't a place anymore. It's your voice at 2 AM, your laugh, the way you say my name. It's just… you.",
-    placeholder: "Your favorite photo of us",
+    image: memory3,
   },
 ];
 
@@ -80,12 +83,13 @@ const MemorySection = () => {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Photo placeholder */}
-              <div className="aspect-square bg-blush/30 flex flex-col items-center justify-center gap-2 border-b border-border/20">
-                <ImageIcon className="w-10 h-10 text-rose/30" />
-                <p className="text-xs text-muted-foreground text-center px-4">
-                  {memory.placeholder}
-                </p>
+              {/* Photo */}
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src={memory.image} 
+                  alt={memory.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
               </div>
 
               <div className="p-5">
