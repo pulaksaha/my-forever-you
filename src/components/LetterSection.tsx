@@ -46,21 +46,27 @@ const LetterSection = () => {
           
           <div className="space-y-5 text-foreground leading-relaxed text-base md:text-lg">
             <p>
-              I don't really know how to start this. Maybe because every word 
-              feels small when I try to describe what you mean to me.
+              Our story was never perfect. We were together once, in those early days 
+              when life felt simple and everything felt possible. Then life took me away, 
+              and slowly we both accepted that maybe this was the end of us. No hope, 
+              no expectations—<span className="italic text-muted-foreground">bas ek silence jo time ke saath normal lagne laga.</span>
             </p>
             
             <p>
-              I miss you — not in the loud, dramatic way, but in the quiet 
-              moments. When I'm eating alone, when I see something funny, 
-              when the night gets too silent. <span className="italic text-muted-foreground">Tum yaad aati ho, har chhoti si cheez mein.</span>
+              For a long time, you were just a quiet memory. Not something that hurt 
+              every day, but something I carried with me. <span className="italic text-muted-foreground">Kabhi kabhi yaad aa jaati thi, bina wajah, bina shor ke.</span>
             </p>
             
             <p>
-              Our late-night calls, fighting over who'll hang up first, 
-              counting days to the next time we meet — it's not easy. 
-              But with you, I've learned that love isn't about being close. 
-              It's about choosing to stay, even when it's hard.
+              And then life surprised us. We found our way back to each other—not 
+              because we planned it, but because some people are never really gone. 
+              Meeting you again didn't feel new. It felt right. <span className="italic text-muted-foreground">Jaise kuch adhoora tha jo finally complete hua.</span>
+            </p>
+            
+            <p>
+              We're not the same people anymore, but the comfort is the same. The 
+              connection is the same. And now I know—some stories don't end. They 
+              just pause, and wait for the right moment to begin again.
             </p>
             
             <p>
@@ -74,8 +80,11 @@ const LetterSection = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <p className="font-romantic text-xl text-primary">
+            <p className="font-romantic text-xl text-primary mb-1">
               With all my heart
+            </p>
+            <p className="font-romantic text-lg text-deep-rose">
+              yours truly, pulak
             </p>
           </div>
         </div>
