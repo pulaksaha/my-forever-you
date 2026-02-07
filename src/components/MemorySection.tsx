@@ -20,14 +20,14 @@ const memories: Memory[] = [
   },
   {
     icon: <MapPin className="w-5 h-5" />,
-    title: "Miles Apart, Still Together",
-    description: "Different cities, different skies. But every goodnight text felt like you were right here. The distance never stood a chance.",
+    title: "The Light You Carry",
+    description: "Your love feels soft. Your positivity lifts everything around you. And your smile— it quietly makes my world better.",
     image: memory2,
   },
   {
     icon: <Home className="w-5 h-5" />,
-    title: "Why Pallabi Feels Like Home",
-    description: "Home isn't a place anymore. It's your voice at 2 AM, your laugh, the way you say my name. It's just… you.",
+    title: "What Never Left",
+    description: "Time passed. Life changed. But something between us never faded. It waited. And when we met again, I knew— it was always there.",
     image: memory3,
   },
 ];
