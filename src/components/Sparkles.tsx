@@ -13,7 +13,8 @@ const Sparkles = () => {
   const [sparkles, setSparkles] = useState<Sparkle[]>([]);
 
   useEffect(() => {
-    const newSparkles: Sparkle[] = Array.from({ length: 20 }, (_, i) => ({
+    // Reduced to 10 sparkles for subtle effect
+    const newSparkles: Sparkle[] = Array.from({ length: 10 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
       top: Math.random() * 100,

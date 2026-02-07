@@ -1,4 +1,4 @@
-import { Heart, Sparkles } from "lucide-react";
+import { Heart } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -31,80 +31,62 @@ const ProposalSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 md:py-32 px-4 bg-cream relative overflow-hidden"
+      className="py-20 md:py-28 px-4 bg-cream relative overflow-hidden"
     >
-      {/* Decorative elements */}
-      <div className="absolute top-10 left-10 opacity-20">
-        <Heart className="w-20 h-20 text-rose fill-rose" />
-      </div>
-      <div className="absolute bottom-10 right-10 opacity-20">
-        <Heart className="w-16 h-16 text-rose fill-rose" />
-      </div>
-
       <div
-        className={`max-w-3xl mx-auto text-center transition-all duration-1000 ${
+        className={`max-w-2xl mx-auto text-center transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         {!answered ? (
           <>
-            <div className="mb-8">
-              <Sparkles className="w-10 h-10 text-accent mx-auto mb-4 animate-pulse-soft" />
-              <h2 className="font-romantic text-4xl md:text-6xl lg:text-7xl text-gradient leading-tight mb-6">
-                Will you be my forever, even across all distances?
+            <div className="mb-10">
+              <Heart className="w-8 h-8 text-rose fill-rose mx-auto mb-6 animate-pulse-soft" />
+              <h2 className="font-romantic text-3xl md:text-5xl text-gradient leading-tight mb-4">
+                <span className="text-deep-rose">Pallabi</span>, will you walk this long road with me…
               </h2>
-              <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto">
-                Through every timezone, every mile, every moment apart...
+              <p className="font-romantic text-2xl md:text-3xl text-primary">
+                today and always?
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 onClick={handleAnswer}
-                className="group relative px-10 py-6 text-xl font-romantic bg-primary hover:bg-deep-rose text-primary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="group px-8 py-5 text-lg font-romantic bg-primary hover:bg-deep-rose text-primary-foreground rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 <span className="flex items-center gap-2">
                   YES
-                  <Heart className="w-5 h-5 fill-current group-hover:animate-heart-beat" />
+                  <Heart className="w-4 h-4 fill-current" />
                 </span>
               </Button>
 
               <Button
                 onClick={handleAnswer}
                 variant="outline"
-                className="group px-10 py-6 text-xl font-romantic border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="group px-8 py-5 text-lg font-romantic border-2 border-primary/60 text-primary hover:bg-primary/10 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
-                <span className="flex items-center gap-2">
-                  ALWAYS YOU
-                  <span className="text-lg">💍</span>
-                </span>
+                ALWAYS YOU 🤍
               </Button>
             </div>
           </>
         ) : (
           <div className="animate-fade-in-up">
             <div className="mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Heart
-                  key={i}
-                  className="inline-block w-8 h-8 mx-1 text-rose fill-rose animate-heart-beat"
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                />
-              ))}
+              <Heart className="w-10 h-10 text-rose fill-rose mx-auto animate-heart-beat" />
             </div>
             
-            <h2 className="font-romantic text-5xl md:text-7xl text-gradient mb-6">
-              I knew it 🥹❤️
+            <h2 className="font-romantic text-4xl md:text-5xl text-gradient mb-4">
+              I already knew the answer…
             </h2>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto">
-              You just made me the happiest person in the world. 
-              Even from miles away, my heart is doing a happy dance!
+            <p className="text-xl md:text-2xl text-muted-foreground">
+              it was always you.
             </p>
 
-            <div className="mt-10">
-              <p className="font-romantic text-3xl text-primary animate-pulse-soft">
-                Forever yours, across every distance 💕
+            <div className="mt-8">
+              <p className="font-romantic text-2xl text-primary">
+                Thank you, <span className="text-deep-rose">Pallabi</span> 💕
               </p>
             </div>
           </div>

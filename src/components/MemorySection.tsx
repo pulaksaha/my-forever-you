@@ -1,4 +1,4 @@
-import { Heart, Calendar, Plane, Star, ImageIcon } from "lucide-react";
+import { Heart, Sparkles, MapPin, Home, ImageIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 interface Memory {
@@ -10,22 +10,22 @@ interface Memory {
 
 const memories: Memory[] = [
   {
-    icon: <Calendar className="w-6 h-6" />,
-    title: "The Day We Met",
-    description: "The universe had already planned this. One conversation, and I knew my life was about to change forever.",
-    placeholder: "Add your special photo here",
+    icon: <Sparkles className="w-5 h-5" />,
+    title: "When You Became Important",
+    description: "I can't pinpoint the exact moment. It just happened — slowly, then all at once. You weren't just someone I talked to anymore.",
+    placeholder: "Our first photo together",
   },
   {
-    icon: <Plane className="w-6 h-6" />,
-    title: "Our Long Distance Journey",
-    description: "Different cities, different time zones, same heartbeat. We turned 'far apart' into 'always together.'",
-    placeholder: "Add your journey photo here",
+    icon: <MapPin className="w-5 h-5" />,
+    title: "Miles Apart, Still Together",
+    description: "Different cities, different skies. But every goodnight text felt like you were right here. The distance never stood a chance.",
+    placeholder: "A memory from the distance",
   },
   {
-    icon: <Star className="w-6 h-6" />,
-    title: "What I Love About You",
-    description: "Your laugh, your kindness, your strength, the way you make everything feel like home. Everything.",
-    placeholder: "Add your favorite photo here",
+    icon: <Home className="w-5 h-5" />,
+    title: "Why Pallabi Feels Like Home",
+    description: "Home isn't a place anymore. It's your voice at 2 AM, your laugh, the way you say my name. It's just… you.",
+    placeholder: "Your favorite photo of us",
   },
 ];
 
@@ -57,60 +57,49 @@ const MemorySection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-32 px-4 gradient-romantic">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-romantic text-4xl md:text-6xl text-gradient mb-4">
-            Our Story
+    <section ref={sectionRef} className="py-20 md:py-28 px-4 gradient-romantic">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="font-romantic text-3xl md:text-5xl text-gradient mb-3">
+            Our Little Moments
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Every moment with you is a memory I'll treasure forever
+          <p className="text-muted-foreground text-base max-w-md mx-auto">
+            The ones I hold closest to my heart
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-3 gap-5">
           {memories.map((memory, index) => (
             <div
               key={index}
               data-index={index}
-              className={`memory-card bg-card rounded-2xl shadow-lg overflow-hidden border border-border/30 transition-all duration-700 hover:shadow-xl hover:-translate-y-1 ${
+              className={`memory-card bg-card rounded-xl shadow-md overflow-hidden border border-border/20 transition-all duration-700 hover:shadow-lg ${
                 visibleCards[index]
                   ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
+                  : "opacity-0 translate-y-8"
               }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Photo placeholder */}
-              <div className="aspect-[4/3] bg-blush/50 flex flex-col items-center justify-center gap-3 border-b border-border/30">
-                <ImageIcon className="w-12 h-12 text-rose/40" />
-                <p className="text-sm text-muted-foreground text-center px-4">
+              <div className="aspect-square bg-blush/30 flex flex-col items-center justify-center gap-2 border-b border-border/20">
+                <ImageIcon className="w-10 h-10 text-rose/30" />
+                <p className="text-xs text-muted-foreground text-center px-4">
                   {memory.placeholder}
                 </p>
               </div>
 
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 bg-blush rounded-lg text-primary">
+              <div className="p-5">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="p-1.5 bg-blush/50 rounded-md text-primary">
                     {memory.icon}
                   </div>
-                  <h3 className="font-romantic text-2xl text-foreground">
+                  <h3 className="font-romantic text-xl text-foreground">
                     {memory.title}
                   </h3>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {memory.description}
                 </p>
-              </div>
-
-              <div className="px-6 pb-6">
-                <div className="flex gap-1">
-                  {[...Array(3)].map((_, i) => (
-                    <Heart
-                      key={i}
-                      className="w-3 h-3 text-rose fill-rose"
-                    />
-                  ))}
-                </div>
               </div>
             </div>
           ))}

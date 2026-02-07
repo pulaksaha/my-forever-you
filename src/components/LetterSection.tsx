@@ -25,66 +25,57 @@ const LetterSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 md:py-32 px-4 bg-cream relative"
+      className="py-20 md:py-28 px-4 bg-cream relative"
     >
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-2xl mx-auto">
         <div
-          className={`bg-card rounded-2xl shadow-xl p-8 md:p-12 border border-border/50 relative transition-all duration-1000 ${
+          className={`bg-card rounded-2xl shadow-lg p-8 md:p-10 border border-border/30 relative transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <Quote className="absolute top-4 left-4 w-8 h-8 text-rose/30" />
-          <Quote className="absolute bottom-4 right-4 w-8 h-8 text-rose/30 rotate-180" />
+          <Quote className="absolute top-4 left-4 w-6 h-6 text-rose/20" />
           
           <div className="text-center mb-8">
-            <h2 className="font-romantic text-3xl md:text-5xl text-primary mb-2">
-              My Dearest Love
+            <h2 className="font-romantic text-3xl md:text-4xl text-primary mb-2">
+              Dear <span className="text-deep-rose">Pallabi</span>,
             </h2>
             <div className="flex justify-center gap-1">
-              {[...Array(3)].map((_, i) => (
-                <Heart key={i} className="w-4 h-4 text-rose fill-rose" />
-              ))}
+              <Heart className="w-3 h-3 text-rose fill-rose" />
             </div>
           </div>
           
-          <div className="space-y-6 text-foreground leading-relaxed text-base md:text-lg">
+          <div className="space-y-5 text-foreground leading-relaxed text-base md:text-lg">
             <p>
-              There are so many things I wish I could say to you in person, 
-              but since the distance keeps us apart, let these words travel 
-              across the miles to reach your heart...
+              I don't really know how to start this. Maybe because every word 
+              feels small when I try to describe what you mean to me.
             </p>
             
             <p>
-              Every night when I look at the sky, I know somewhere, you're 
-              looking at the same moon. That thought alone makes the wait 
-              bearable. <span className="italic text-muted-foreground">Kitni doori hai, phir bhi dil kitna paas.</span>
+              I miss you — not in the loud, dramatic way, but in the quiet 
+              moments. When I'm eating alone, when I see something funny, 
+              when the night gets too silent. <span className="italic text-muted-foreground">Tum yaad aati ho, har chhoti si cheez mein.</span>
             </p>
             
             <p>
-              I miss the little things — your laugh during our late-night calls, 
-              the way you say "goodnight" when it's already morning for you, 
-              and how we count down to every "see you soon."
+              Our late-night calls, fighting over who'll hang up first, 
+              counting days to the next time we meet — it's not easy. 
+              But with you, I've learned that love isn't about being close. 
+              It's about choosing to stay, even when it's hard.
             </p>
             
             <p>
-              Time zones taught us patience. Distance taught us trust. 
-              And love? Love taught us that being apart doesn't mean being away.
+              And I choose you. Every single day. Through the waiting, the 
+              missing, the timezone math — I choose you, Pallabi.
             </p>
             
-            <p>
-              Every day I choose you. Through the silence of missed calls, 
-              through the ache of empty arms, through every "I wish you were here" — 
-              <span className="font-semibold text-primary"> I choose you</span>.
-            </p>
-            
-            <p className="text-center italic text-muted-foreground">
-              "Tere bina adhoora hoon, par tere saath... I'm home."
+            <p className="text-center italic text-muted-foreground pt-2">
+              "Tumse door hoon, par tumse juda nahi."
             </p>
           </div>
           
-          <div className="mt-10 text-center">
-            <p className="font-romantic text-2xl text-deep-rose">
-              With all my love, forever and always
+          <div className="mt-8 text-center">
+            <p className="font-romantic text-xl text-primary">
+              With all my heart
             </p>
           </div>
         </div>
