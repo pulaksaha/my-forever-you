@@ -14,7 +14,8 @@ const FloatingHearts = () => {
   const [hearts, setHearts] = useState<FloatingHeart[]>([]);
 
   useEffect(() => {
-    const newHearts: FloatingHeart[] = Array.from({ length: 15 }, (_, i) => ({
+    // Reduced to 8 hearts for minimal, subtle effect
+    const newHearts: FloatingHeart[] = Array.from({ length: 8 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
       delay: Math.random() * 10,
